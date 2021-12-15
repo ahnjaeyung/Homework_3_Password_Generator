@@ -1,7 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; // alphabet characters
+lowerAlpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; // lowercase alphabet characters
+upperAlpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"] // uppercase alphabet characters
 num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; // numerical characters
 spec = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ":", ";", "'", '"', ",", "<", ".", ">", "/", "?"]; // special characters
 
@@ -11,10 +12,6 @@ var pwLower; // desire lowercase letters?
 var pwNum; // desire numbers?
 var pwSpec; // desire special characters?
 var options; // user's password criteria
-
-var toUpper = function (x) {
-  return x.toUpperCase();
-} // converts letter to uppercase
 
 // Write password to the #password input
 // function getOptions ()
