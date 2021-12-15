@@ -25,7 +25,7 @@ function writePassword() {
 function generatePassword(){
 
   var pwLength = prompt("Please enter your desired character length for password.");
-  if (!(num >=8 && num <= 128)) {
+  if (!(pwLength >=8 && pwLength <= 128)) {
     alert("Please enter a valid character length");
   } else {
     pwUpper = confirm("Include uppercase letters?");
