@@ -10,6 +10,7 @@ var pwUpper; // desire uppercase letters?
 var pwLower; // desire lowercase letters?
 var pwNum; // desire numbers?
 var pwSpec; // desire special characters?
+var options; // user's password criteria
 
 // Write password to the #password input
 // function getOptions ()
@@ -32,7 +33,8 @@ function generatePassword(){
     pwLower = confirm("Include lowercase letters?");
     pwNum = confirm("Include numbers?");
     pwSpec = confirm("Include special characters?");
-  }
+  };
+
   
   //add prompt for userInput for num of char in password
     // 8<=num<=128
