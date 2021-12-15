@@ -12,6 +12,10 @@ var pwNum; // desire numbers?
 var pwSpec; // desire special characters?
 var options; // user's password criteria
 
+var toUpper = function (x) {
+  return x.toUpperCase();
+} // converts letter to uppercase
+
 // Write password to the #password input
 // function getOptions ()
 function writePassword() {
