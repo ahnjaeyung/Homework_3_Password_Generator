@@ -36,6 +36,40 @@ function generatePassword(){
     pwSpec = confirm("Include special characters?");
   };
 
+  if (!pwUpper && !pwLower && !pwNum && !pwSpec) {
+    options = alert ("Please pick atleast one password criteria.")
+  } else if (pwUpper && pwLower && pwNum && pwSpec) {
+    options = pwUpper.concat(pwLower, pwNum, pwSpec);
+  } else if (pwUpper && pwLower && pwNum) {
+    options = pwUpper.concat(pwLower, pwNum);
+  } else if (pwUpper && pwLower && pwSpec) {
+    options = pwUpper.concat(pwLower, pwSpec);
+  } else if (pwUpper && pwNum && pwSpec) {
+    options = pwUpper.concat(pwNum, pwSpec);
+  } else if (pwLower && pwNum && pwSpec) {
+    options = pwLower.concat(pwNum, pwSpec);
+  } else if (pwUpper && pwLower) {
+    options = pwUpper.concat(pwLower);
+  } else if (pwUpper && pwNum) {
+    options = pwUpper.concat(pwNum);
+  } else if (pwUpper && pwSpec) {
+    options = pwUpper.concat(pwSpec)
+  } else if (pwLower && pwNum) {
+    options = pwLower.concat(pwNum);
+  } else if (pwLower && pwSpec) {
+    options = pwLower.concat(pwSpec);
+  } else if (pwNum && pwSpec) {
+    options = pwNum.concat(pwSpec);
+  } else if (pwUpper) {
+    options = pwUpper;
+  } else if (pwLower) {
+    options = pwLower;
+  } else if (pwNum) {
+    options = pwNum;
+  } else if (pwSpec) {
+    options = pwSpec;
+  }
+
   
   //add prompt for userInput for num of char in password
     // 8<=num<=128
