@@ -1,6 +1,6 @@
 # Homework 3: Password Generator #
 Password Generator - Jae Ahn
-![Pasword Generator](./assets/screenshot.png)
+![Pasword Generator](./Assets/screenshot.png)
 
 This is a browser application that enables users to generate random passwords based on criteria that they have selected.  The password generation process will begin once the user clicks on the *Generate Password* button.  Once this button is clicked, the user will be presented with a series of prompts for password criteria.  These criteria include:
 * Desired character length (8-128 characters)
