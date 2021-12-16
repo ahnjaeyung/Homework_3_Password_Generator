@@ -12,6 +12,7 @@ var pwLower; // desire lowercase letters?
 var pwNum; // desire numbers?
 var pwSpec; // desire special characters?
 var options; // user's password criteria
+var pass = [];
 
 // Write password to the #password input
 // function getOptions ()
@@ -39,37 +40,49 @@ function generatePassword(){
   if (!pwUpper && !pwLower && !pwNum && !pwSpec) {
     options = alert ("Please pick atleast one password criteria.")
   } else if (pwUpper && pwLower && pwNum && pwSpec) {
-    options = pwUpper.concat(pwLower, pwNum, pwSpec);
+    options = upperAlpha.concat(lowerAlpha, num, spec);
   } else if (pwUpper && pwLower && pwNum) {
-    options = pwUpper.concat(pwLower, pwNum);
+    options = upperAlpha.concat(lower, num);
   } else if (pwUpper && pwLower && pwSpec) {
-    options = pwUpper.concat(pwLower, pwSpec);
+    options = upperAlpha.concat(lowerAlpha, spec);
   } else if (pwUpper && pwNum && pwSpec) {
-    options = pwUpper.concat(pwNum, pwSpec);
+    options = upperAlpha.concat(num, spec);
   } else if (pwLower && pwNum && pwSpec) {
-    options = pwLower.concat(pwNum, pwSpec);
+    options = lowerAlpha.concat(num, spec);
   } else if (pwUpper && pwLower) {
-    options = pwUpper.concat(pwLower);
+    options = upperAlpha.concat(lowerAlpha);
   } else if (pwUpper && pwNum) {
-    options = pwUpper.concat(pwNum);
+    options = upperAlpha.concat(num);
   } else if (pwUpper && pwSpec) {
-    options = pwUpper.concat(pwSpec)
+    options = upperAlpha.concat(spec)
   } else if (pwLower && pwNum) {
-    options = pwLower.concat(pwNum);
+    options = lowerAlpha.concat(num);
   } else if (pwLower && pwSpec) {
-    options = pwLower.concat(pwSpec);
+    options = lowerAlpha.concat(spec);
   } else if (pwNum && pwSpec) {
-    options = pwNum.concat(pwSpec);
+    options = num.concat(spec);
   } else if (pwUpper) {
-    options = pwUpper;
+    options = upperAlpha;
   } else if (pwLower) {
-    options = pwLower;
+    options = lowerAlpha;
   } else if (pwNum) {
-    options = pwNum;
+    options = num;
   } else if (pwSpec) {
-    options = pwSpec;
+    options = spec;
   }
 
+  for (var i = 0; i < pwLength; i++) {
+    var chooseChar = options[Math.floor(Math.random() * options.length)];
+    pass.push(chooseChar);
+  }
+
+  var pw = pass.join("");
+  userInput(pw);
+  return pw;
+
+  function userInput(pw) {
+    document.getElementById("password").textContent = pw;
+  }
   
   //add prompt for userInput for num of char in password
     // 8<=num<=128
