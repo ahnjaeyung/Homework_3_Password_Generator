@@ -76,13 +76,9 @@ function generatePassword(){
     pass.push(chooseChar);
   }
 
-  var pw = pass.join("");
-  userInput(pw);
-  return pw;
+  var passwordText = pass.join("");
+  return passwordText;
 
-  function userInput(pw) {
-    document.getElementById("password").textContent = pw;
-  }
   
   //add prompt for userInput for num of char in password
     // 8<=num<=128
