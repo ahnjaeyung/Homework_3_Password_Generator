@@ -76,6 +76,7 @@ function generatePassword(){
   }
 
   var passwordText = pass.join("");
+  pass = []
   return passwordText;
 }
 
